@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Testosterone and Height: An Interactive Guide</title>
+  <meta name="description" content="See what testosterone does to growth at each stage of life, why it speeds up the teen growth spurt without adding adult height, and test what you know.">
+  <meta property="og:title" content="Testosterone and Height: An Interactive Guide">
+  <meta property="og:description" content="Explore how testosterone and estrogen shape growth from childhood to adulthood, then test yourself with five myth-or-fact questions.">
+  <meta property="og:type" content="website">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <a class="skip-link" href="#main">Skip to content</a>
+
+  <header class="site-header">
+    <p class="site-name">Testosterone &amp; Height</p>
+  </header>
+
+  <main id="main">
+    <section class="intro" aria-labelledby="page-title">
+      <h1 id="page-title">Testosterone speeds growth up. It also helps end it.</h1>
+      <p class="lede">During puberty, part of a boy's testosterone is converted into estrogen, and estrogen is the signal that closes the growth plates. Pick a stage below to see what testosterone does to height at each point in life.</p>
+    </section>
+
+    <section class="explorer" aria-labelledby="explorer-title">
+      <h2 id="explorer-title" class="visually-hidden">Stage explorer</h2>
+
+      <div class="stage-track" role="tablist" aria-label="Life stages" id="stage-tabs"></div>
+
+      <div class="stage-panel" id="stage-panel" role="tabpanel" tabindex="0">
+        <figure class="bone" aria-hidden="true">
+          <svg viewBox="0 0 160 360" id="bone-svg">
+            <g class="bone-shape">
+              <ellipse cx="80" cy="44" rx="52" ry="32"/>
+              <rect x="52" y="60" width="56" height="240" rx="18"/>
+              <ellipse cx="80" cy="316" rx="52" ry="32"/>
+            </g>
+            <g class="bone-fill">
+              <ellipse cx="80" cy="44" rx="51" ry="31"/>
+              <rect x="53" y="58" width="54" height="244" rx="17"/>
+              <ellipse cx="80" cy="316" rx="51" ry="31"/>
+            </g>
+            <rect class="plate" id="plate-top" x="34" y="66" width="92" height="10" rx="3"/>
+            <rect class="plate" id="plate-bottom" x="34" y="284" width="92" height="10" rx="3"/>
+          </svg>
+          <figcaption id="plate-caption"></figcaption>
+        </figure>
+
+        <div class="stage-copy">
+          <p class="stage-age" id="stage-age"></p>
+          <h3 id="stage-name"></h3>
+          <dl class="stage-facts">
+            <div>
+              <dt>What testosterone does</dt>
+              <dd id="stage-does"></dd>
+            </div>
+            <div>
+              <dt>Effect on height</dt>
+              <dd id="stage-effect"></dd>
+            </div>
+          </dl>
+          <div class="speed" aria-hidden="true">
+            <span class="speed-label">Growth speed</span>
+            <span class="speed-track"><span class="speed-fill" id="speed-fill"></span></span>
+          </div>
+          <p class="stage-note" id="stage-note"></p>
+        </div>
+      </div>
+    </section>
+
+    <section class="pathway" aria-labelledby="pathway-title">
+      <h2 id="pathway-title">The pathway in five steps</h2>
+      <ol class="steps">
+        <li><strong>Testosterone rises.</strong> The testes make much more of it once puberty starts.</li>
+        <li><strong>Some becomes estrogen.</strong> An enzyme called aromatase converts part of it into estradiol.</li>
+        <li><strong>Growth speeds up.</strong> Early in puberty, both hormones fuel the growth spurt.</li>
+        <li><strong>Plates start to fuse.</strong> Later, estrogen signals the growth plates to harden into bone.</li>
+        <li><strong>Growth stops.</strong> Once the plates close, adult height is set.</li>
+      </ol>
+      <p>In 1994, doctors described a 28-year-old man whose body couldn't respond to estrogen. His testosterone was normal, yet his growth plates had never closed. He stood 6'8" and was still slowly growing.</p>
+    </section>
+
+    <section class="quiz" aria-labelledby="quiz-title">
+      <h2 id="quiz-title">Myth or fact?</h2>
+      <p>Five quick statements. Choose an answer to see the explanation.</p>
+      <div id="quiz-list"></div>
+      <p class="quiz-score" id="quiz-score" role="status" aria-live="polite"></p>
+    </section>
+
+    <section class="more" aria-labelledby="more-title">
+      <h2 id="more-title">What actually shapes adult height</h2>
+      <p>Genetics, mostly. Scientists estimate that about 80% of the variation in height comes from inherited DNA. Good nutrition, enough sleep, regular activity, and overall health during childhood and the teen years help a young person reach that potential. If a boy shows no signs of puberty by around age 14, or a child's growth seems to have slowed, a pediatrician can evaluate it.</p>
+      <p>For the full research breakdown, including real-world cases and references, read <a href="https://doctortaller.com/blogs/science-insight/does-testosterone-make-you-taller">Does Testosterone Make You Taller?</a></p>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <p>This page is for general education and isn't medical advice. Talk to a doctor about any concern with growth, puberty, or hormones.</p>
+    <p>Sources: MedlinePlus Genetics; Archives of Disease in Childhood (1979); Hormone Research in Paediatrics (2013); New England Journal of Medicine (1994); National Institute on Drug Abuse; International Journal of Endocrinology and Metabolism (2017); Nemours KidsHealth.</p>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>
